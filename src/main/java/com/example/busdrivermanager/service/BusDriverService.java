@@ -1,6 +1,7 @@
 package com.example.busdrivermanager.service;
 
 import com.example.busdrivermanager.domainobject.BusDriverDO;
+import com.example.busdrivermanager.domainvalue.OnlineStatus;
 import com.example.busdrivermanager.exception.BusAlreadyInUseException;
 import com.example.busdrivermanager.exception.ConstraintsViolationException;
 import com.example.busdrivermanager.exception.EntityNotFoundException;
@@ -19,4 +20,7 @@ public interface BusDriverService {
     void updateCurrentCar(long busDriverId, long busId) throws EntityNotFoundException, BusAlreadyInUseException;
 
     void deselectCurrentCar(long busDriverId) throws EntityNotFoundException;
+
+    void updateOnlineStatus(long busDriverId, OnlineStatus onlineStatus) throws EntityNotFoundException;
+
 }

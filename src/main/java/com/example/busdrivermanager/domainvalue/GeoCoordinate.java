@@ -3,6 +3,7 @@ package com.example.busdrivermanager.domainvalue;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.base.Preconditions;
 import org.springframework.data.geo.Point;
 
 import javax.persistence.Column;
