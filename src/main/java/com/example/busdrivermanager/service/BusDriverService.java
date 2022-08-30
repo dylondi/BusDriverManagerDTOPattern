@@ -6,6 +6,8 @@ import com.example.busdrivermanager.exception.BusAlreadyInUseException;
 import com.example.busdrivermanager.exception.ConstraintsViolationException;
 import com.example.busdrivermanager.exception.EntityNotFoundException;
 
+import java.util.List;
+
 public interface BusDriverService {
 
 
@@ -22,5 +24,12 @@ public interface BusDriverService {
     void deselectCurrentCar(long busDriverId) throws EntityNotFoundException;
 
     void updateOnlineStatus(long busDriverId, OnlineStatus onlineStatus) throws EntityNotFoundException;
+
+    List<BusDriverDO> findByOnlineStatus(OnlineStatus onlineStatus);
+
+    List<BusDriverDO> findByOnlineStatusOrUsernameOrLicensePlateOrRating(OnlineStatus onlineStatus, String username, String licensePlate, Double rating);
+
+    List<BusDriverDO> findByOnlineStatusAndUsernameAndLicensePlateAndRating(OnlineStatus onlineStatus, String username, String licensePlate, Double rating);
+
 
 }
