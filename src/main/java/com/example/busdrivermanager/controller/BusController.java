@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * <p/>
  */
 @RestController
-@RequestMapping("v1/cars")
+@RequestMapping("v1/buses")
 public class BusController {
 
 
@@ -44,7 +44,7 @@ public class BusController {
 
 
     @DeleteMapping("/{busId}")
-    public void deleteBusDriver(@PathVariable long busId) throws EntityNotFoundException
+    public void deleteBus(@PathVariable long busId) throws EntityNotFoundException
     {
         busService.delete(busId);
     }
